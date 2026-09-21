@@ -143,7 +143,7 @@ export default function VerifyCandidate({ onNavigate }: VerifyCandidateProps) {
           </div>
 
           {/* Bottom row: fee + submit */}
-          <div className="flex items-center justify-between mt-6">
+          <div className="flex flex-col gap-3 mt-6 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-[14px] font-normal font-['Inter',sans-serif] text-[#62646a]">
               Verification Fee:{' '}
               <span className="font-bold text-[#0f172b]">₦6,000</span>
@@ -151,7 +151,7 @@ export default function VerifyCandidate({ onNavigate }: VerifyCandidateProps) {
 
             <button
               type="submit"
-              className="flex items-center gap-2 bg-[#ff5533] hover:bg-[#e64d2e] transition-colors text-white rounded-xl px-6 py-3 text-[15px] font-bold font-['Inter',sans-serif] shadow-[0px_4px_8px_rgba(211,1,28,0.24)]"
+              className="flex items-center justify-center gap-2 bg-[#ff5533] hover:bg-[#e64d2e] transition-colors text-white rounded-xl px-6 py-3 text-[15px] font-bold font-['Inter',sans-serif] shadow-[0px_4px_8px_rgba(211,1,28,0.24)] w-full sm:w-auto"
             >
               Verify Candidate Result
               <img src={arrowRightLinear} alt="" className="w-4 h-4 brightness-0 invert" />

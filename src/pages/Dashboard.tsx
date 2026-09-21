@@ -50,10 +50,10 @@ export default function Dashboard({ onNavigate }: DashboardProps) {
       </div>
 
       {/* ── Bottom Row ─────────────────────────────────────────── */}
-      <div className="flex gap-4 flex-1 min-h-[320px]">
+      <div className="flex flex-col gap-4 flex-1 min-h-[320px] lg:flex-row">
 
         {/* Monthly Request Volume */}
-        <div className="flex-1 min-w-0 bg-[#fafcff] rounded-xl shadow-[0px_4px_10px_#eeeef7] p-6 flex flex-col gap-4">
+        <div className="flex-1 min-w-0 bg-[#fafcff] rounded-xl shadow-[0px_4px_10px_#eeeef7] p-4 sm:p-6 flex flex-col gap-4">
           <div className="flex items-center justify-between">
             <h3 className="text-[20px] font-bold font-['Urbanist',sans-serif] text-[#0f172b]">
               Monthly Request Volume
@@ -84,7 +84,7 @@ export default function Dashboard({ onNavigate }: DashboardProps) {
         </div>
 
         {/* Quick Links */}
-        <div className="w-[300px] flex-shrink-0 bg-[#fafcff] rounded-xl shadow-[0px_4px_10px_#eeeef7] p-6 flex flex-col">
+        <div className="w-full flex-shrink-0 bg-[#fafcff] rounded-xl shadow-[0px_4px_10px_#eeeef7] p-4 sm:p-6 flex flex-col lg:w-[300px]">
           <h3 className="text-[20px] font-bold font-['Urbanist',sans-serif] text-[#0f172b] mb-2">
             Quick Links
           </h3>

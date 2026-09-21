@@ -81,12 +81,14 @@ type SidebarProps = {
   activePage?: string;
   onNavigate?: (page: string) => void;
   institutionName?: string;
+  onClose?: () => void;
 };
 
 export default function Sidebar({
   activePage = 'dashboard',
   onNavigate,
   institutionName = 'Techbroker University',
+  onClose,
 }: SidebarProps) {
   const getInitialExpanded = () => {
     const map: Record<string, boolean> = {};
@@ -105,7 +107,10 @@ export default function Sidebar({
   const toggle = (id: string) =>
     setExpanded(prev => ({ ...prev, [id]: !prev[id] }));
 
-  const go = (id: string) => onNavigate?.(id);
+  const go = (id: string) => {
+    onNavigate?.(id);
+    onClose?.();
+  };
 
   const isActive = (item: NavItemConfig) =>
     activePage === item.id ||
@@ -187,7 +192,7 @@ export default function Sidebar({
   );
 
   return (
-    <aside className="flex flex-col h-screen w-[288px] bg-[#0f172b] flex-shrink-0 overflow-y-auto">
+    <aside className="flex flex-col h-screen w-full bg-[#0f172b] flex-shrink-0 overflow-y-auto lg:w-[288px] lg:min-w-[288px]">
 
       {/* ── Logo ───────────────────────────────── */}
       <div className="flex items-center gap-3 px-5 pt-6 pb-5">
@@ -219,6 +224,19 @@ export default function Sidebar({
             By Techbroker
           </span>
         </div>
+
+        {onClose && (
+          <button
+            type="button"
+            aria-label="Close menu"
+            onClick={onClose}
+            className="ml-auto flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 text-[#dddedf] lg:hidden"
+          >
+            <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        )}
       </div>
 
       {/* ── Institution Name ───────────────────── */}

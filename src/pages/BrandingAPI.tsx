@@ -80,10 +80,10 @@ export default function BrandingAPI({ initialConfig = DEMO_CONFIG }: Props) {
       </div>
 
       {/* Two-column body */}
-      <div className="flex gap-4 items-start flex-wrap lg:flex-nowrap">
+      <div className="flex flex-col gap-4 items-start lg:flex-row lg:flex-nowrap">
 
         {/* Left — Profile Settings */}
-        <div className="flex-1 min-w-0 bg-[#fafcff] rounded-xl shadow-[0px_4px_10px_#eeeef7] px-6 py-6">
+        <div className="w-full flex-1 min-w-0 bg-[#fafcff] rounded-xl shadow-[0px_4px_10px_#eeeef7] px-4 py-5 sm:px-6 sm:py-6">
           <h3 className="text-[18px] font-bold font-['Urbanist',sans-serif] text-[#38393d] mb-5">
             Profile Settings
           </h3>
@@ -180,7 +180,7 @@ export default function BrandingAPI({ initialConfig = DEMO_CONFIG }: Props) {
               <button
                 type="submit"
                 disabled={saving}
-                className="bg-[#ff5533] hover:bg-[#e64d2e] disabled:opacity-60 transition-colors text-white font-bold font-['Inter',sans-serif] text-[15px] px-8 py-3 rounded-xl shadow-[0px_4px_8px_rgba(211,1,28,0.2)]"
+                className="w-full bg-[#ff5533] hover:bg-[#e64d2e] disabled:opacity-60 transition-colors text-white font-bold font-['Inter',sans-serif] text-[15px] px-8 py-3 rounded-xl shadow-[0px_4px_8px_rgba(211,1,28,0.2)] sm:w-auto"
               >
                 {saving ? 'Saving…' : 'Save Configurations'}
               </button>
@@ -189,7 +189,7 @@ export default function BrandingAPI({ initialConfig = DEMO_CONFIG }: Props) {
         </div>
 
         {/* Right column */}
-        <div className="flex flex-col gap-4 w-full lg:w-[340px] flex-shrink-0">
+        <div className="flex flex-col gap-4 w-full lg:w-[340px] lg:flex-shrink-0">
 
           {/* Widget API Key */}
           <div className="bg-[#fafcff] rounded-xl shadow-[0px_4px_10px_#eeeef7] px-6 py-6">

@@ -97,10 +97,10 @@ export default function StaffDirectory(_props: Props) {
     <div className="flex flex-col gap-4 min-h-full">
 
       {/* Two-column body */}
-      <div className="flex gap-4 items-start flex-wrap lg:flex-nowrap flex-1">
+      <div className="flex flex-col gap-4 items-start lg:flex-row lg:flex-nowrap flex-1">
 
         {/* Left — Onboard Staff Member */}
-        <div className="w-full lg:w-[320px] flex-shrink-0 bg-[#fafcff] rounded-xl shadow-[0px_4px_10px_#eeeef7] px-6 py-6">
+        <div className="w-full lg:w-[320px] lg:flex-shrink-0 bg-[#fafcff] rounded-xl shadow-[0px_4px_10px_#eeeef7] px-4 py-5 sm:px-6 sm:py-6">
           <h3 className="text-[18px] font-bold font-['Urbanist',sans-serif] text-[#38393d] mb-5">
             Onboard Staff Member
           </h3>

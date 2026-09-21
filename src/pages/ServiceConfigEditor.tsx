@@ -79,10 +79,10 @@ export default function ServiceConfigEditor({ service, onBack }: Props) {
 
       {/* Two-column body */}
       <form onSubmit={handleApply}>
-        <div className="flex gap-4 items-start flex-wrap lg:flex-nowrap">
+        <div className="flex flex-col gap-4 items-start lg:flex-row lg:flex-nowrap">
 
           {/* Left — Service Settings */}
-          <div className="w-full lg:w-[320px] flex-shrink-0 bg-[#fafcff] rounded-xl shadow-[0px_4px_10px_#eeeef7] px-6 py-6">
+          <div className="w-full lg:w-[320px] lg:flex-shrink-0 bg-[#fafcff] rounded-xl shadow-[0px_4px_10px_#eeeef7] px-4 py-5 sm:px-6 sm:py-6">
             <h3 className="text-[16px] font-bold font-['Urbanist',sans-serif] text-[#38393d] mb-5">
               Service Settings
             </h3>
@@ -146,7 +146,7 @@ export default function ServiceConfigEditor({ service, onBack }: Props) {
           </div>
 
           {/* Right — Dynamic Form Fields Builder */}
-          <div className="flex-1 min-w-0 bg-[#fafcff] rounded-xl shadow-[0px_4px_10px_#eeeef7] px-6 py-6">
+          <div className="w-full flex-1 min-w-0 bg-[#fafcff] rounded-xl shadow-[0px_4px_10px_#eeeef7] px-4 py-5 sm:px-6 sm:py-6">
             <h3 className="text-[16px] font-bold font-['Urbanist',sans-serif] text-[#38393d] mb-1">
               Dynamic Form Fields Builder
             </h3>
@@ -158,7 +158,7 @@ export default function ServiceConfigEditor({ service, onBack }: Props) {
 
               {/* Column headers */}
               {fields.length > 0 && (
-                <div className="grid grid-cols-[1fr_180px_160px_auto] gap-3 items-center px-1">
+                <div className="hidden xl:grid xl:grid-cols-[1fr_180px_160px_auto] gap-3 items-center px-1">
                   {['Field Label (Visible to Student)', 'JSON DB Key', 'Type', ''].map(h => (
                     <p key={h} className="text-[10px] font-bold font-['Urbanist',sans-serif] text-[#62646a] uppercase tracking-[0.1em]">
                       {h}
@@ -171,7 +171,7 @@ export default function ServiceConfigEditor({ service, onBack }: Props) {
               {fields.map(field => (
                 <div
                   key={field.id}
-                  className="grid grid-cols-[1fr_180px_160px_auto] gap-3 items-center border border-[#eeeef7] rounded-xl px-4 py-3"
+                  className="grid grid-cols-1 gap-3 items-center border border-[#eeeef7] rounded-xl px-4 py-3 xl:grid-cols-[1fr_180px_160px_auto]"
                 >
                   {/* Label */}
                   <input

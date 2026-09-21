@@ -142,8 +142,8 @@ export default function PendingRequests({ onProcess }: Props) {
       </div>
 
       {/* Search + Filters */}
-      <div className="bg-[#fafcff] rounded-xl shadow-[0px_4px_10px_#eeeef7] px-4 py-4 flex gap-3 flex-wrap">
-        <div className="relative flex-1 min-w-[200px]">
+      <div className="bg-[#fafcff] rounded-xl shadow-[0px_4px_10px_#eeeef7] px-4 py-4 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+        <div className="relative flex-1 min-w-[180px]">
           <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#62646a]/50" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
             <circle cx="11" cy="11" r="8" /><path strokeLinecap="round" d="M21 21l-4.35-4.35" />
           </svg>
@@ -159,7 +159,7 @@ export default function PendingRequests({ onProcess }: Props) {
         <select
           value={statusFilter}
           onChange={e => setStatusFilter(e.target.value)}
-          className="appearance-none bg-[#fafcff] border border-[#dddedf] rounded-xl px-4 py-2.5 text-[14px] font-['Inter',sans-serif] text-[#4d4f54] focus:outline-none focus:border-[#ff5533] cursor-pointer min-w-[160px]"
+          className="appearance-none bg-[#fafcff] border border-[#dddedf] rounded-xl px-4 py-2.5 text-[14px] font-['Inter',sans-serif] text-[#4d4f54] focus:outline-none focus:border-[#ff5533] cursor-pointer w-full sm:w-auto min-w-[160px]"
         >
           <option value="all-pending">All Pending</option>
           <option value="submitted">Submitted</option>
@@ -169,7 +169,7 @@ export default function PendingRequests({ onProcess }: Props) {
         <select
           value={paymentFilter}
           onChange={e => setPaymentFilter(e.target.value)}
-          className="appearance-none bg-[#fafcff] border border-[#dddedf] rounded-xl px-4 py-2.5 text-[14px] font-['Inter',sans-serif] text-[#4d4f54] focus:outline-none focus:border-[#ff5533] cursor-pointer min-w-[180px]"
+          className="appearance-none bg-[#fafcff] border border-[#dddedf] rounded-xl px-4 py-2.5 text-[14px] font-['Inter',sans-serif] text-[#4d4f54] focus:outline-none focus:border-[#ff5533] cursor-pointer w-full sm:w-auto min-w-[180px]"
         >
           <option value="all">All Payment Statuses</option>
           <option value="paid">Paid</option>

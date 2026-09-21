@@ -93,9 +93,9 @@ export default function WalletBalance({ walletData = DEMO_WALLET }: Props) {
     <div className="flex flex-col gap-4 min-h-full">
 
       {/* Section Header */}
-      <div className="bg-[#fafcff] rounded-xl shadow-[0px_4px_10px_#eeeef7] px-6 py-5 flex items-center justify-between gap-4">
+      <div className="bg-[#fafcff] rounded-xl shadow-[0px_4px_10px_#eeeef7] px-4 py-5 sm:px-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h2 className="text-[22px] font-bold font-['Urbanist',sans-serif] text-[#38393d] leading-tight">
+          <h2 className="text-[20px] sm:text-[22px] font-bold font-['Urbanist',sans-serif] text-[#38393d] leading-tight">
             Institution Wallet &amp; Balance
           </h2>
           <p className="text-[14px] font-normal font-['Inter',sans-serif] text-[#62646a] mt-1">
@@ -105,14 +105,14 @@ export default function WalletBalance({ walletData = DEMO_WALLET }: Props) {
 
         <button
           onClick={handleFundWallet}
-          className="flex-shrink-0 bg-[#ff5533] hover:bg-[#e64d2e] transition-colors text-white font-bold font-['Inter',sans-serif] text-[15px] px-6 py-3 rounded-xl shadow-[0px_4px_8px_rgba(211,1,28,0.2)]"
+          className="flex-shrink-0 bg-[#ff5533] hover:bg-[#e64d2e] transition-colors text-white font-bold font-['Inter',sans-serif] text-[15px] px-6 py-3 rounded-xl shadow-[0px_4px_8px_rgba(211,1,28,0.2)] w-full sm:w-auto"
         >
           Fund Wallet
         </button>
       </div>
 
       {/* Balance + Stats Row */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
 
         {/* Available Balance — dark card */}
         <div className="relative bg-[#0f172b] rounded-xl px-6 py-7 overflow-hidden">

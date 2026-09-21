@@ -84,15 +84,15 @@ export default function VerificationLogs({ onNavigate }: Props) {
       </div>
 
       {/* Stats Row */}
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
         <StatMini label="Total Verifications" value={totalVerifications} valueColor="text-[#0f172b]" />
         <StatMini label="WAEC Records"         value={waecRecords}        valueColor="text-[#ff9933]" />
         <StatMini label="NECO Records"         value={necoRecords}        valueColor="text-[#38119b]" />
       </div>
 
       {/* Search + Filter */}
-      <div className="bg-[#fafcff] rounded-xl shadow-[0px_4px_10px_#eeeef7] px-4 py-4 flex gap-3">
-        <div className="relative flex-1">
+      <div className="bg-[#fafcff] rounded-xl shadow-[0px_4px_10px_#eeeef7] px-4 py-4 flex flex-col gap-3 sm:flex-row">
+        <div className="relative flex-1 min-w-0">
           <img src={SEARCH_ICON} alt="" className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 opacity-40" />
           <input
             type="text"
@@ -106,7 +106,7 @@ export default function VerificationLogs({ onNavigate }: Props) {
         <select
           value={bodyFilter}
           onChange={e => setBodyFilter(e.target.value)}
-          className="appearance-none bg-[#fafcff] border border-[#dddedf] rounded-xl px-4 py-2.5 text-[14px] font-['Inter',sans-serif] text-[#4d4f54] focus:outline-none focus:border-[#ff5533] cursor-pointer min-w-[200px]"
+          className="appearance-none bg-[#fafcff] border border-[#dddedf] rounded-xl px-4 py-2.5 text-[14px] font-['Inter',sans-serif] text-[#4d4f54] focus:outline-none focus:border-[#ff5533] cursor-pointer w-full sm:w-auto min-w-[160px]"
         >
           <option value="all">All Examination Bodies</option>
           <option value="WAEC">WAEC</option>

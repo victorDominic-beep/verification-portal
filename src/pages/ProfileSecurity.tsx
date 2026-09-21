@@ -134,10 +134,10 @@ export default function ProfileSecurity({ initialProfile = DEMO_PROFILE }: Props
       </div>
 
       {/* Two-column forms */}
-      <div className="flex gap-4 flex-wrap lg:flex-nowrap items-start">
+      <div className="flex flex-col gap-4 lg:flex-row lg:flex-nowrap items-start">
 
         {/* Left — Edit Staff Profile */}
-        <div className="flex-1 min-w-0 bg-[#fafcff] rounded-xl shadow-[0px_4px_10px_#eeeef7] px-6 py-6">
+        <div className="w-full flex-1 min-w-0 bg-[#fafcff] rounded-xl shadow-[0px_4px_10px_#eeeef7] px-4 py-5 sm:px-6 sm:py-6">
           <h3 className="text-[18px] font-bold font-['Urbanist',sans-serif] text-[#38393d] mb-5">
             Edit Staff Profile
           </h3>

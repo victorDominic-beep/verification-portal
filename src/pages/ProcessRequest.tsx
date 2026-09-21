@@ -101,10 +101,10 @@ export default function ProcessRequest({ request, onBack }: Props) {
       </div>
 
       {/* Two-column body */}
-      <div className="flex gap-4 items-start flex-wrap lg:flex-nowrap">
+      <div className="flex flex-col gap-4 items-start lg:flex-row lg:flex-nowrap">
 
         {/* Left column */}
-        <div className="flex flex-col gap-4 flex-1 min-w-0">
+        <div className="flex flex-col gap-4 w-full flex-1 min-w-0">
 
           {/* Requester & Service Profile */}
           <div className="bg-[#fafcff] rounded-xl shadow-[0px_4px_10px_#eeeef7] px-6 py-6">
@@ -153,7 +153,7 @@ export default function ProcessRequest({ request, onBack }: Props) {
         </div>
 
         {/* Right column */}
-        <div className="flex flex-col gap-4 w-full lg:w-[340px] flex-shrink-0">
+        <div className="flex flex-col gap-4 w-full lg:w-[340px] lg:flex-shrink-0">
 
           {/* Workflow Actions */}
           <div className="bg-[#fafcff] rounded-xl shadow-[0px_4px_10px_#eeeef7] px-6 py-6">
