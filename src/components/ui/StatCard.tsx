@@ -31,18 +31,18 @@ const cfg = {
 export default function StatCard({ label, value, badge, badgeColor }: StatCardProps) {
   const { valueCls, badgeBg, badgeText } = cfg[badgeColor];
   return (
-    <div className="bg-[#eeeef7] border border-[#fafcff] rounded-xl px-6 py-8 flex flex-col gap-5 shadow-[0px_4px_6px_rgba(171,171,176,0.2)] min-w-0">
+    <div className="bg-[#eeeef7] border border-[#fafcff] rounded-xl px-4 py-5 sm:px-6 sm:py-8 flex flex-col gap-4 shadow-[0px_4px_6px_rgba(171,171,176,0.2)] min-w-0">
       {/* Label */}
-      <p className="text-[11px] font-bold font-['Urbanist',sans-serif] text-[#4d4f54] uppercase tracking-[0.08em]">
+      <p className="text-[10px] sm:text-[11px] font-bold font-['Urbanist',sans-serif] text-[#4d4f54] uppercase tracking-[0.08em] leading-tight">
         {label}
       </p>
 
       {/* Value + Badge row — aligned to bottom */}
-      <div className="flex items-end justify-between gap-2">
-        <span className={`text-[56px] font-semibold font-['Urbanist',sans-serif] leading-none ${valueCls}`}>
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between sm:gap-2">
+        <span className={`text-[34px] sm:text-[44px] lg:text-[56px] font-semibold font-['Urbanist',sans-serif] leading-none ${valueCls}`}>
           {value}
         </span>
-        <span className={`${badgeBg} ${badgeText} text-[11px] font-normal font-['Inter',sans-serif] px-3 py-1.5 rounded-xl whitespace-nowrap mb-1 shrink-0`}>
+        <span className={`${badgeBg} ${badgeText} text-[10px] sm:text-[11px] font-normal font-['Inter',sans-serif] px-2.5 py-1.5 rounded-xl whitespace-nowrap self-start sm:self-end sm:mb-1 shrink-0 max-w-full text-center`}>
           {badge}
         </span>
       </div>

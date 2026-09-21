@@ -42,7 +42,7 @@ export default function Dashboard({ onNavigate }: DashboardProps) {
       </div>
 
       {/* ── KPI Cards ──────────────────────────────────────────── */}
-      <div className="grid grid-cols-2 xl:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
         <StatCard label="Pending Payment"  value={0} badge="Awaiting Settlement" badgeColor="pending"  />
         <StatCard label="Pending Request"   value={7} badge="Urgent"              badgeColor="urgent"   />
         <StatCard label="Under Review"     value={2} badge="In Progress"         badgeColor="progress" />
